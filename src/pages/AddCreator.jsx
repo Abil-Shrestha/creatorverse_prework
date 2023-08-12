@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { supabase } from '../client'
 
 const AddCreator = () => {
@@ -34,18 +34,18 @@ const AddCreator = () => {
         <div className="AddEditCreator">
             <form id="addCreatorForm">
                 <label>Name</label>
-                <input type="text" id="name" name="name" value={creator.name} onChange={handleChange} required />
+                <input type="text" name="name" value={creator.name} onChange={handleChange} placeholder='Type the Creators Name' required />
                 <label>
                     Image
                     <p>Provide a link to an image of your creator. Be sure to include the http://</p>
                 </label>
-                <input type="text" id="image" name="image" value={creator.image} onChange={handleChange} required />
+                <input type="text" name="image" value={creator.image} onChange={handleChange} placeholder='Paste the image link here' required />
 
                 <label>
                     Description
                     <p>Provide a description of the creator. Who are they? What makes them interesting?</p>
                 </label>
-                <textarea name="description" rows="3" cols="50" id="description" value={creator.description} onChange={handleChange} required></textarea>
+                <textarea name="description" rows="3" cols="50" value={creator.description} onChange={handleChange} placeholder='Provide Description for creator' required></textarea>
 
                 <h3>Social Media Links</h3>
                 <p>Provide at least one of the creator&apos;s social media links.</p>
@@ -54,21 +54,21 @@ const AddCreator = () => {
                     <span className="fa-brands fa-youtube"></span> YouTube
                     <p>The creator&apos;s YouTube handle (without the @)</p>
                 </label>
-                <input type="text" id="youtube" name="youtube" value ={creator.youtube} onChange={handleChange} />
+                <input type="text"  name="youtube" value ={creator.youtube} onChange={handleChange} />
 
                 <label>
                     <span className="fa-brands fa-twitter"></span> Twitter
                     <p>The creator&apos;s Twitter handle (without the @)</p>
                 </label>
-                <input type="text" id="twitter" name="twitter" value ={creator.twitter} onChange={handleChange} />
+                <input type="text"  name="twitter" value ={creator.twitter} onChange={handleChange} />
 
                 <label>
                     <span className="fa-brands fa-instagram"></span> Instagram
                     <p>The creator&apos;s Instagram handle (without the @)</p>
                 </label>
-                <input type="text" id="instagram" name="instagram" value ={creator.instagram} onChange={handleChange} />
+                <input type="text" name="instagram" value ={creator.instagram} onChange={handleChange} />
 
-                <button type="submit" onClick={addCreator}>Submit</button>
+                <button type="submit" onClick={addCreator}>Add User</button>
             </form>
 
         </div>

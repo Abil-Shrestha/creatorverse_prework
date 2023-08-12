@@ -1,4 +1,206 @@
+
 #root {
-  max-width: 1280px;
   text-align: center;
 }
+
+.App{
+  width:100vw;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.ShowCreators{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:center;
+  width:100vw;
+}
+
+#root {
+  font-family: Poppins, Verdana, sans-serif;
+  --border-width: 2px;
+  --border-radius: 0.3rem;
+  background-color: rgb(0, 0, 0);
+}
+
+
+
+header {
+  height:120px;
+  width:100vw;
+  background-color: rgb(43, 44, 44);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+nav ul{
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+  list-style:none;
+  margin:0;
+  padding:0;
+  width:100vw;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+nav li {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+main {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  justify-content: center;
+}
+
+article {
+  height: 100%;
+  margin: 0px;
+}
+.ShowCreators {
+  height: 100%;
+  margin: 0px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Divide into four equal parts */
+  grid-template-rows: repeat(2, 1fr);
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .ShowCreators {
+    grid-template-columns: repeat(3, 1fr); /* Three cards per row */
+    grid-template-rows: repeat(3, 1fr);    /* Three rows */
+  }
+}
+@media (max-width: 768px) {
+  .ShowCreators {
+    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+    grid-template-rows: repeat(4, 1fr);    /* Four rows */
+  }
+}
+@media (max-width: 600px) {
+  .ShowCreators {
+    grid-template-columns: 1fr; /* One card per row */
+    grid-template-rows: auto;   /* Auto adjust rows */
+  }
+}
+
+
+/* Typography */
+
+h1 {
+  font-family: Sono;
+  font-size: 60px;
+  margin-bottom:0%;
+  margin-top: 1%;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  line-height: 1em;
+}
+
+h2,
+h3 {
+  font-family: Poppins;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+h2 {
+  font-size: 3vw;
+}
+
+h3 {
+  font-size: 25px;
+  text-shadow: 1px 1px 1px #00060D;
+}
+
+
+
+/* add and edit form */
+
+.AddEditCreator {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form p {
+  font-size: 0.6em;
+  font-style: italic;
+  padding-bottom: 10px;
+}
+a{
+  font-size:20px;
+  color: #fff;
+  text-decoration: none;
+}
+a::hover{
+  font-size:28px;
+}
+label {
+  font-size: 29px;
+}
+
+input, textarea {
+  font-size: 0.9em;
+  height:40px;
+  width:100%;
+  margin-bottom:20px;
+}
+
+label span {
+  margin-right: 10px;
+}
+
+
+
+[role=button] {
+  width: 15em;
+}
+
+input[type=submit] {
+  background-color:#287A00;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  height: 3em;
+  font-family: inherit;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 1.3px;
+  padding: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+button:is([aria-current], :hover, :active, :focus),
+input[type=submit]:is([aria-current], :hover, :active, :focus),
+input[type=button]:is([aria-current], :hover, :active, :focus),
+input[type=reset]:is([aria-current], :hover, :active, :focus),
+[role=button]:is([aria-current], :hover, :active, :focus) {
+  border-color: rgb(92, 91, 91);
+}
+

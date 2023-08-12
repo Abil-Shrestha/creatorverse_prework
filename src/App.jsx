@@ -12,8 +12,7 @@ function App() {
     const fetchCreators = async () => {
       const { data, error } = await supabase
       .from('creators')
-      .select()
-      console.log(data)
+      .select('*')
       if (error) {
         console.log(error)
       }

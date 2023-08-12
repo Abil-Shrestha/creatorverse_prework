@@ -1,19 +1,19 @@
 import { useState, useEffect } from 'react'
-import Card from '../components/card'
+import Card from '../components/Card'
 
-const ShowCreators = (props) => {
+const ShowCreators = (creatorData) => {
 
     const [creators, setCreators] = useState([])
 
     useEffect(() => {
-        setCreators(props.data)
-    }, [props])
+        setCreators(creatorData.data)
+    }, [creatorData])
     
-    return (
+    return ( 
         <section className="ShowCreators">
             {
                 creators && creators.length > 0 ?
-                creators.map((creator,index) => 
+                creators.map((creator) => 
                 <Card key={creator.id} id={creator.id} name={creator.name} youtube={creator.youtube} twitter={creator.twitter} instagram={creator.instagram} description={creator.description} image={creator.image}/>
                 ) : <h3>{'No Creators Yet 😞'}</h3>
             }
